@@ -27,6 +27,9 @@ uninstall:
 deb:
 	make -C $(CURDIR)/tools deb
 
+build-golang:
+	make -C $(CURDIR)/ppc64le-gc build-golang
+
 rpm:
 	make -C $(CURDIR)/tools rpm
 

@@ -12,9 +12,9 @@ PKG_NAME := nvidia-docker
 PKG_VERS := 1.0.0~rc.3
 PKG_REV  := 1
 ifneq ($(MAKECMDGOALS),rpm)
-PKG_ARCH := amd64
+PKG_ARCH := ppc64el
 else
-PKG_ARCH := x86_64
+PKG_ARCH := ppc64el
 endif
 
 BIN_DIR    := $(CURDIR)/bin
