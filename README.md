@@ -1,3 +1,29 @@
+# NVIDIA Docker on ppc64le
+
+## Compilation
+This repository gives basic support for nvidia-docker on ppc64le.
+
+Please note that in current, nvidia-docker and nvidia-docker-plugin tool compilation are ported to ppc64le only. Nvidia docker images building has not been ported yet. You need to port your dockerfile to ppc64le by yourself.
+
+To build deb packages, please follow these steps:
+```sh
+# Build golang 1.6.3 image. golang 1.5 on ppc64le has a "relocation truncated" bug to build nvidia-docker.
+make build-golang
+
+# Build deb package for nvidia-docker and nvidia-docker-plugin
+make deb
+```
+After compilation, following the printed message to find the deb package.
+
+## Installation
+```sh
+# Install nvidia-docker package
+dpkg -i nvidia-docker-<release>.deb
+
+# One-time setup
+sudo nvidia-docker volume setup
+```
+
 # NVIDIA Docker
 
 This repository includes utilities to build and run NVIDIA Docker images.

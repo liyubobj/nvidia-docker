@@ -1,3 +1,9 @@
+nvidia-docker (1.0.0~rc-1) UNRELEASED; urgency=medium
+
+  * 
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Fri, 19 Aug 2016 07:17:31 +0000
+
 nvidia-docker (1.0.0~rc) trusty; urgency=low
 
   * Support compile and running on ppc64le
