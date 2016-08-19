@@ -27,11 +27,20 @@ uninstall:
 deb:
 	make -C $(CURDIR)/tools deb
 
+build-golang:
+	make -C $(CURDIR)/ppc64le-gc build-golang
+
+rpm:
+	make -C $(CURDIR)/tools rpm
+
 tarball:
 	make -C $(CURDIR)/tools tarball
 
 cuda: $(CURDIR)/$(OS)/cuda
 	make -C $(CURDIR)/$(OS)/cuda
+
+opencl: $(CURDIR)/$(OS)/opencl
+	make -C $(CURDIR)/$(OS)/opencl
 
 caffe: $(CURDIR)/$(OS)/caffe
 	make -C $(CURDIR)/$(OS)/caffe

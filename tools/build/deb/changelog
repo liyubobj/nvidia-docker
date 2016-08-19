@@ -1,0 +1,59 @@
+nvidia-docker (1.0.0~rc) trusty; urgency=low
+
+  * Support compile and running on ppc64le
+  * Support for Docker 1.12
+  * Add volume mount options support to the nvidia package
+  * Export the nvidia-uvm-tools device
+  * Provide the libcuda.so symlink as part of the driver volume (Closes: #103)
+  * Use relative symlinks inside the volumes
+  * Disable CUDA unified memory
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Fri, 17 Jun 2016 22:08:11 +0000
+
+nvidia-docker (1.0.0~rc.2-1) trusty; urgency=low
+
+  * Allow UUIDs to be used in NV_GPU and docker/cli RestAPI endpoint
+  * Change the plugin usage with version information (Closes: #90)
+  * Remove the volume setup command (Closes: #96)
+  * Add support for the Pascal architecture 
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Sat, 28 May 2016 00:18:44 +0000
+
+nvidia-docker (1.0.0~rc-1) trusty; urgency=low
+
+  * Add /docker/cli/json RestAPI endpoint (Closes: #39, #91)
+  * Fix support for Docker 1.9 (Closes: #83)
+  * Handle gracefully devices unsupported by NVML (Closes: #40)
+  * Improve error reporting
+  * Support for Docker 1.11 (Closes: #89, #84, #77, #73)
+  * Add NVIDIA Docker version output
+  * Improve init scripts and add support for systemd
+  * Query CPU affinity through sysfs instead of NVML (Closes: #65)
+  * Load UVM before anything else
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Tue, 03 May 2016 17:44:36 -0700
+
+nvidia-docker (1.0.0~beta.3-1) trusty; urgency=low
+
+  * Remove driver hard dependency (NVML)
+  * Improve error handling and REST API output
+  * Support for 364 drivers
+  * Preventive removal of the plugin socket
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Mon, 28 Mar 2016 16:48:51 -0700
+
+nvidia-docker (1.0.0~beta.2-1) trusty; urgency=low
+
+  * Support for Docker 1.10 (Closes: #46)
+  * Support for Docker plugin API v1.2
+  * Support for 361 drivers
+  * Add copy strategy for cross-device volumes (Closes: #47)
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Mon, 07 Mar 2016 11:41:21 -0800
+
+nvidia-docker (1.0.0~beta-1) trusty; urgency=low
+
+  * Initial release (Closes: #33)
+
+ -- NVIDIA CORPORATION <digits@nvidia.com>  Mon, 08 Feb 2016 11:17:52 -0800
+
